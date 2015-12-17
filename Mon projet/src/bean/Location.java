@@ -13,47 +13,37 @@ import java.util.Date;
  */
 public class Location {
     
-    private Date date_retour ;
-    private Date date_depart ;
-    private Date date_retard;
+    private Date date_debut ;
+    private Date date_fin ;
     private int kilométrage ;
     private Voiture voiture ;
-    private Reservation reservation ;
+    private Client client ;
 
     public Location() {
     }
 
-    public Location(Date date_retour, Date date_depart, Date date_retard, int kilométrage, Voiture voiture, Reservation reservation) {
-        this.date_retour = date_retour;
-        this.date_depart = date_depart;
-        this.date_retard = date_retard;
+    public Location(Date date_debut, Date date_fin, int kilométrage, Voiture voiture, Client client) {
+        this.date_debut = date_debut;
+        this.date_fin = date_fin;
         this.kilométrage = kilométrage;
         this.voiture = voiture;
-        this.reservation = reservation;
+        this.client = client;
     }
 
-    public Date getDate_retour() {
-        return date_retour;
+    public Date getDate_debut() {
+        return date_debut;
     }
 
-    public void setDate_retour(Date date_retour) {
-        this.date_retour = date_retour;
+    public void setDate_debut(Date date_debut) {
+        this.date_debut = date_debut;
     }
 
-    public Date getDate_depart() {
-        return date_depart;
+    public Date getDate_fin() {
+        return date_fin;
     }
 
-    public void setDate_depart(Date date_depart) {
-        this.date_depart = date_depart;
-    }
-
-    public Date getDate_retard() {
-        return date_retard;
-    }
-
-    public void setDate_retard(Date date_retard) {
-        this.date_retard = date_retard;
+    public void setDate_fin(Date date_fin) {
+        this.date_fin = date_fin;
     }
 
     public int getKilométrage() {
@@ -72,20 +62,18 @@ public class Location {
         this.voiture = voiture;
     }
 
-    public Reservation getReservation() {
-        return reservation;
+    public Client getClient() {
+        return client;
     }
 
-    public void setReservation(Reservation reservation) {
-        this.reservation = reservation;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "date_retour=" + date_retour + ", date_depart=" + date_depart + ", date_retard=" + date_retard + ", kilom\u00e9trage=" + kilométrage + ", voiture=" + voiture + ", reservation=" + reservation + '}';
+        return "Location{" + "date_debut=" + date_debut + ", date_fin=" + date_fin + ", kilom\u00e9trage=" + kilométrage + ", voiture=" + voiture + ", client=" + client + '}';
     }
     
-    
-    
-    
-}
+
+   }
