@@ -11,25 +11,24 @@ import java.util.Date;
  *
  * @author User
  */
-public class Reservation {
-    private String id;
-    private Date date_reserv;
-    private Date date_loc ;
-    private Date date_retour ;
+public class Facture {
+    
+    private String id ;
+    private Date date_retour; 
+    private int prix ;
     private Client client ;
 
-    public Reservation() {
+    public Facture() {
     }
 
-    public Reservation(String id) {
+    public Facture(String id) {
         this.id = id;
     }
 
-    public Reservation(String id, Date date_reserv, Date date_loc, Date date_retour, Client client) {
+    public Facture(String id, Date date_retour, int prix, Client client) {
         this.id = id;
-        this.date_reserv = date_reserv;
-        this.date_loc = date_loc;
         this.date_retour = date_retour;
+        this.prix = prix;
         this.client = client;
     }
 
@@ -41,28 +40,20 @@ public class Reservation {
         this.id = id;
     }
 
-    public Date getDate_reserv() {
-        return date_reserv;
-    }
-
-    public void setDate_reserv(Date date_reserv) {
-        this.date_reserv = date_reserv;
-    }
-
-    public Date getDate_loc() {
-        return date_loc;
-    }
-
-    public void setDate_loc(Date date_loc) {
-        this.date_loc = date_loc;
-    }
-
     public Date getDate_retour() {
         return date_retour;
     }
 
     public void setDate_retour(Date date_retour) {
         this.date_retour = date_retour;
+    }
+
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
     }
 
     public Client getClient() {
@@ -75,10 +66,9 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" + "id=" + id + ", date_reserv=" + date_reserv + ", date_loc=" + date_loc + ", date_retour=" + date_retour + ", client=" + client + '}';
+        return "Facture{" + "id=" + id + ", date_retour=" + date_retour + ", prix=" + prix + ", client=" + client + '}';
     }
-    
-    
-    
+
+   
     
 }

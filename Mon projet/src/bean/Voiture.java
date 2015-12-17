@@ -17,8 +17,11 @@ public class Voiture {
     private String marque ;
     private String type;
     private Date date_achat;
-    private Number kilometrage ;
-    private Agence agence ;
+    private String modele;
+    private int kilometrage ;
+    private String etat;
+    private int prix_location;
+    private Reservation reservation ;
 
     public Voiture() {
     }
@@ -27,13 +30,16 @@ public class Voiture {
         this.id = id;
     }
 
-    public Voiture(String id, String marque, String type, Date date_achat, Number kilometrage, Agence agence) {
+    public Voiture(String id, String marque, String type, Date date_achat, String modele, int kilometrage, String etat, int prix_location, Reservation reservation) {
         this.id = id;
         this.marque = marque;
         this.type = type;
         this.date_achat = date_achat;
+        this.modele = modele;
         this.kilometrage = kilometrage;
-        this.agence = agence;
+        this.etat = etat;
+        this.prix_location = prix_location;
+        this.reservation = reservation;
     }
 
     public String getId() {
@@ -68,26 +74,51 @@ public class Voiture {
         this.date_achat = date_achat;
     }
 
-    public Number getKilometrage() {
+    public String getModele() {
+        return modele;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public int getKilometrage() {
         return kilometrage;
     }
 
-    public void setKilometrage(Number kilometrage) {
+    public void setKilometrage(int kilometrage) {
         this.kilometrage = kilometrage;
     }
 
-    public Agence getAgence() {
-        return agence;
+    public String getEtat() {
+        return etat;
     }
 
-    public void setAgence(Agence agence) {
-        this.agence = agence;
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public int getPrix_location() {
+        return prix_location;
+    }
+
+    public void setPrix_location(int prix_location) {
+        this.prix_location = prix_location;
+    }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
     }
 
     @Override
     public String toString() {
-        return "Voiture{" + "id=" + id + ", marque=" + marque + ", type=" + type + ", date_achat=" + date_achat + ", kilometrage=" + kilometrage + ", agence=" + agence + '}';
+        return "Voiture{" + "id=" + id + ", marque=" + marque + ", type=" + type + ", date_achat=" + date_achat + ", modele=" + modele + ", kilometrage=" + kilometrage + ", etat=" + etat + ", prix_location=" + prix_location + ", reservation=" + reservation + '}';
     }
+
     
     
     

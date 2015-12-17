@@ -13,6 +13,7 @@ public class Client {
     private String id;
     private String nom;
     private String prenom ;
+    private int telephone;
     private String adresse ;
 
     public Client() {
@@ -22,12 +23,15 @@ public class Client {
         this.id = id;
     }
 
-    public Client(String id, String nom, String prenom, String adresse) {
+    public Client(String id, String nom, int telephone, String adresse, String prenom) {
         this.id = id;
         this.nom = nom;
-        this.prenom = prenom;
+        this.telephone = telephone;
         this.adresse = adresse;
+        this.prenom = prenom;
     }
+
+    
 
     public String getId() {
         return id;
@@ -39,6 +43,14 @@ public class Client {
 
     public String getNom() {
         return nom;
+    }
+
+    public int getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
 
     public void setNom(String nom) {
@@ -63,9 +75,10 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + '}';
+        return "Client{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", telephone=" + telephone + ", adresse=" + adresse + '}';
     }
-    
+
+   
     
    
 }
